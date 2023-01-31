@@ -97,6 +97,7 @@ for session in sessions:
                 sessions_data[session]["close_candles"].append(float(i['candle']["close"]))
                 sessions_data[session]["datetime"].append(
                     datetime.strptime(i['datetime'].split(".")[0], '%Y-%m-%d %H:%M:%S'))
+
 print("Сессии:")
 for n, session in enumerate(sessions):
     print(f"{n}. {session} real_order={sessions_data[session]['data'][-1]['real_order']} "
